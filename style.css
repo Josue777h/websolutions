@@ -1,0 +1,354 @@
+/* =================================
+   VARIABLES Y ESTILOS GLOBALES
+==================================== */
+
+/* Definimos nuestras paletas de colores para los temas claro y oscuro */
+:root,
+[data-bs-theme="dark"] {
+  --bs-body-bg: #0d1117; /* Un negro azulado, más suave que el negro puro */
+  --bs-body-color: #c9d1d9;
+  --bs-secondary-bg: #161b22;
+  --bs-tertiary-bg: #21262d;
+  --bs-border-color: #30363d;
+  --bs-info: #58a6ff; /* Un azul brillante como color de acento principal */
+  --bs-info-rgb: 88, 166, 255;
+  --bs-light: #f0f6fc;
+}
+
+[data-bs-theme="light"] {
+  --bs-body-bg: #ffffff;
+  --bs-body-color: #24292f;
+  --bs-secondary-bg: #f6f8fa;
+  --bs-tertiary-bg: #eaeef2;
+  --bs-border-color: #d0d7de;
+  --bs-info: #0969da; /* Un azul más estándar para el modo claro */
+  --bs-info-rgb: 9, 105, 218;
+  --bs-light: #24292f;
+}
+
+body {
+  /* Transiciones suaves para el cambio de tema */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Efecto de scroll suave al hacer clic en los enlaces de la navbar */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Ajuste para que la navbar fija no oculte los títulos de sección */
+}
+
+/* =================================
+   NAVBAR
+==================================== */
+.navbar-brand.my-name {
+  color: var(--bs-info);
+}
+
+.navbar {
+  transition: background-color 0.4s ease-in-out, padding 0.4s ease-in-out;
+  position: fixed; /* Already set in your HTML, good! */
+  z-index: 1030; /* Add this line or increase if it exists */
+}
+
+/* Estilo para cuando la navbar se vuelve sólida con el scroll */
+.navbar.scrolled {
+  background-color: rgba(13, 17, 23, 0.85); /* Fondo oscuro semitransparente */
+  backdrop-filter: blur(10px);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+[data-bs-theme="light"] .navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.navbar .nav-link {
+  font-weight: 500;
+  transition: color 0.3s;
+  color: var(--bs-body-color);
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+  color: var(--bs-info) !important;
+}
+/* =================================
+    SECCIÓN HERO (CABECERA)
+==================================== */
+.hero-section {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(
+    to bottom,
+    var(--bs-body-bg),
+    var(--bs-secondary-bg)
+  );
+}
+
+.hero-background-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero-background-svg .animated-shape {
+  /* CAMBIO AQUÍ: Usamos --bs-body-color para que cambie con el texto */
+  fill: var(--bs-body-color); /* Esta variable ya cambia de color con el tema */
+  opacity: 0.08; /* Opacidad sutil para modo oscuro */
+  filter: blur(0.5px);
+  transform-origin: center center;
+}
+
+/* Animaciones individuales para cada forma */
+.hero-background-svg .shape-1 {
+  animation: moveShape 25s ease-in-out infinite alternate,
+    scaleShape 10s ease-in-out infinite alternate;
+  animation-delay: 0s, 0s;
+  opacity: 0.1;
+}
+
+.hero-background-svg .shape-2 {
+  animation: moveShape 20s linear infinite alternate,
+    rotateShape 15s ease-in-out infinite alternate;
+  animation-delay: -5s, -7s;
+  opacity: 0.07;
+}
+
+.hero-background-svg .shape-3 {
+  animation: moveShape 30s ease-in-out infinite alternate,
+    scaleShape 12s linear infinite alternate;
+  animation-delay: -10s, -3s;
+  opacity: 0.12;
+}
+
+.hero-background-svg .shape-4 {
+  animation: moveShape 18s linear infinite alternate,
+    rotateShape 10s ease-in-out infinite alternate;
+  animation-delay: -3s, -8s;
+  opacity: 0.09;
+}
+
+.hero-background-svg .shape-5 {
+  animation: moveShape 28s ease-in-out infinite alternate,
+    scaleShape 11s linear infinite alternate;
+  animation-delay: -15s, -6s;
+  opacity: 0.11;
+}
+
+.hero-background-svg .shape-6 {
+  animation: moveShape 22s linear infinite alternate,
+    rotateShape 13s ease-in-out infinite alternate;
+  animation-delay: -8s, -4s;
+  opacity: 0.06;
+}
+
+.hero-background-svg .shape-7 {
+  animation: moveShape 32s ease-in-out infinite alternate,
+    scaleShape 9s ease-in-out infinite alternate;
+  animation-delay: -12s, -9s;
+  opacity: 0.13;
+}
+
+.hero-background-svg .shape-8 {
+  animation: moveShape 26s linear infinite alternate,
+    rotateShape 14s ease-in-out infinite alternate;
+  animation-delay: -6s, -2s;
+  opacity: 0.1;
+}
+
+/* Keyframes para el movimiento general de las formas */
+@keyframes moveShape {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(15%, -5%);
+  }
+  50% {
+    transform: translate(30%, 10%);
+  }
+  75% {
+    transform: translate(-10%, 20%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* Keyframes para la escala de las formas */
+@keyframes scaleShape {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* Keyframes para la rotación de las formas */
+@keyframes rotateShape {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* CRUCIAL: Ensure your content container is positioned above the SVG */
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ajustes para el modo claro */
+[data-bs-theme="light"] .hero-section {
+  background: linear-gradient(
+    to bottom,
+    var(--bs-body-bg),
+    var(--bs-secondary-bg)
+  );
+}
+
+[data-bs-theme="light"] .hero-background-svg .animated-shape {
+  /* CAMBIO CLAVE AQUÍ: Usamos el color oscuro específico para modo claro */
+  fill: var(
+    --hero-shape-light-color
+  ); /* O el color hexadecimal directo: fill: #4a545f; */
+  opacity: 0.15; /* Aumenta ligeramente la opacidad */
+  filter: blur(0.3px);
+}
+/* =================================
+   CARRUSEL DE LOGOS (TECNOLOGÍAS)
+==================================== */
+.logo-carousel-section {
+  background-color: var(--bs-secondary-bg);
+  overflow: hidden;
+  position: relative;
+  /* Efecto de desvanecimiento en los bordes */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 20%,
+    black 80%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 20%,
+    black 80%,
+    transparent
+  );
+}
+
+.logo-carousel {
+  display: flex;
+}
+
+.logo-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+
+.logo-slide {
+  margin: 0 40px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-slide img {
+  max-height: 50px;
+  width: auto;
+}
+
+.logo-slide:hover img {
+  filter: grayscale(0%) opacity(100%);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* =================================
+   TARJETAS (HABILIDADES Y PROYECTOS)
+==================================== */
+.skill-card,
+.project-card {
+  background-color: var(--bs-secondary-bg);
+  border: 1px solid var(--bs-border-color);
+  border-radius: 0.75rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover,
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+
+/* =================================
+   FORMULARIO DE CONTACTO
+==================================== */
+.form-control {
+  background-color: var(--bs-secondary-bg);
+  border: 1px solid var(--bs-border-color);
+}
+
+.form-control:focus {
+  background-color: var(--bs-secondary-bg);
+  border-color: var(--bs-info);
+  box-shadow: 0 0 0 0.25rem rgba(var(--bs-info-rgb), 0.25);
+  color: var(--bs-body-color);
+}
+
+/* =================================
+   BOTÓN SCROLL TO TOP
+==================================== */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+
+  /* Inicialmente oculto */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+  z-index: 1000;
+}
+
+#scrollTopBtn.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
