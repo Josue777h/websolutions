@@ -352,3 +352,189 @@ html {
   visibility: visible;
   transform: translateY(0);
 }
+/* ====== FOOTER GENERAL ====== */
+.footer-wrapper {
+  background: #0f172a; /* Fondo principal (oscuro elegante) */
+  color: #cbd5e1;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 15px;
+}
+
+.footer-wrap {
+  padding: 60px 0;
+}
+
+.footer-widget {
+  margin-bottom: 30px;
+}
+
+.footer-widget p {
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+/* ====== LOGO ====== */
+.footer-widget .about-logo img {
+  max-width: 180px;
+  margin-bottom: 20px;
+}
+
+/* ====== TÍTULOS ====== */
+.widget_title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 18px;
+  color: #f1f5f9;
+  position: relative;
+}
+
+.widget_title::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #38bdf8;
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+/* ====== REDES SOCIALES ====== */
+.th-social.style7 {
+  display: flex;
+  gap: 10px;
+}
+
+.th-social.style7 a {
+  width: 40px;
+  height: 40px;
+  background: #0d1117;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.th-social.style7 a i {
+  transition: color 0.3s ease;
+}
+
+/* Colores por red social */
+.th-social.style7 a:nth-child(1) i {
+  color: #1877f2;
+} /* Facebook */
+.th-social.style7 a:nth-child(2) i {
+  color: #1da1f2;
+} /* Twitter */
+.th-social.style7 a:nth-child(3) i {
+  color: #0a66c2;
+} /* LinkedIn */
+.th-social.style7 a:nth-child(4) i {
+  color: #ff0000;
+} /* YouTube */
+.th-social.style7 a:nth-child(5) i {
+  color: #e1306c;
+} /* Instagram */
+
+/* Hover */
+.th-social.style7 a:hover {
+  transform: translateY(-4px);
+}
+.th-social.style7 a:hover i {
+  color: #fff;
+}
+.th-social.style7 a:nth-child(1):hover {
+  background: #1877f2;
+}
+.th-social.style7 a:nth-child(2):hover {
+  background: #1da1f2;
+}
+.th-social.style7 a:nth-child(3):hover {
+  background: #0a66c2;
+}
+.th-social.style7 a:nth-child(4):hover {
+  background: #ff0000;
+}
+.th-social.style7 a:nth-child(5):hover {
+  background: #e1306c;
+}
+
+/* ====== CONTACTO ====== */
+.th-widget-contact .info-box_text {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.th-widget-contact .icon {
+  margin-right: 12px;
+}
+
+.th-widget-contact img {
+  width: 20px;
+  height: 20px;
+}
+
+.info-box_link {
+  color: #e2e8f0;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.info-box_link:hover {
+  color: #38bdf8;
+}
+
+/* ====== ENLACES ÚTILES ====== */
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  margin-bottom: 10px;
+}
+
+.menu li a {
+  color: #94a3b8;
+  transition: all 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #38bdf8;
+  padding-left: 5px;
+}
+
+/* ====== COPYRIGHT ====== */
+.copyright-wrap {
+  background: #1e293b;
+  padding: 15px 0;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.copyright-text a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.copyright-text a:hover {
+  text-decoration: underline;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .footer-wrap {
+    text-align: center;
+  }
+
+  .th-social.style7 {
+    justify-content: center;
+  }
+
+  .th-widget-contact .info-box_text {
+    justify-content: center;
+  }
+}
