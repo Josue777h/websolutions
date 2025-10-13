@@ -28,22 +28,36 @@
 </head>
 
   <body data-bs-theme="dark">
-    <nav
-      class="navbar navbar-expand-lg navbar-dark bg-transparent position-fixed top-0 w-100"
-    >
+    <nav class="navbar navbar-expand-lg navbar-modern position-fixed top-0 w-100">
       <div class="container">
-        <a class="navbar-brand my-name fw-bold" href="#">Josue Sepúlveda</a>
-        <div class="ms-auto d-flex align-items-center">
+        <!-- Brand Logo -->
+        <a class="navbar-brand" href="#">
+          <div class="brand-container">
+            <img src="img/diseño web.png" alt="Logo" class="brand-logo">
+            <div class="brand-text">
+              <span class="brand-name">Josue</span>
+              <span class="brand-surname">Sepúlveda</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Right Side Controls -->
+        <div class="navbar-controls d-flex align-items-center">
+          <!-- Dark Mode Toggle -->
           <button
             id="dark-mode-toggle"
-            class="btn btn-outline-secondary me-2"
+            class="theme-toggle-btn"
             aria-label="Alternar modo oscuro"
           >
-            <i class="bi bi-moon-stars-fill" id="icon-moon"></i>
-            <i class="bi bi-sun-fill d-none" id="icon-sun"></i>
+            <div class="toggle-container">
+              <i class="bi bi-moon-stars-fill theme-icon" id="icon-moon"></i>
+              <i class="bi bi-sun-fill theme-icon d-none" id="icon-sun"></i>
+            </div>
           </button>
+
+          <!-- Mobile Menu Toggle -->
           <button
-            class="navbar-toggler"
+            class="mobile-menu-toggle"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
@@ -51,22 +65,44 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
           </button>
         </div>
+
+        <!-- Navigation Menu -->
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#about">Sobre mí</a>
+              <a class="nav-link" href="#about">
+                <i class="bi bi-person-fill nav-icon"></i>
+                <span class="nav-text">Sobre mí</span>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#skills">Habilidades</a>
+              <a class="nav-link" href="#skills">
+                <i class="bi bi-gear-fill nav-icon"></i>
+                <span class="nav-text">Habilidades</span>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#projects">Proyectos</a>
+              <a class="nav-link" href="#projects">
+                <i class="bi bi-folder-fill nav-icon"></i>
+                <span class="nav-text">Proyectos</span>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Contacto</a>
+              <a class="nav-link" href="#contact">
+                <i class="bi bi-envelope-fill nav-icon"></i>
+                <span class="nav-text">Contacto</span>
+              </a>
+            </li>
+            <li class="nav-item nav-cta">
+              <a class="nav-link cta-button" href="#contact">
+                <i class="bi bi-chat-dots-fill me-2"></i>
+                ¡Hablemos!
+              </a>
             </li>
           </ul>
         </div>
@@ -74,285 +110,178 @@
     </nav>
 
     <main>
-      <header
-        class="hero-section d-flex flex-column justify-content-center align-items-center text-center"
-      >
-        <svg
-          class="hero-background-svg"
-          viewBox="0 0 100 100"
-          preserveAspectRatio="xMidyMid slice"
-        >
+      <header class="hero-section">
+        <!-- Background Elements -->
+        <div class="hero-background">
+          <svg class="hero-background-svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
           <circle class="animated-shape shape-1" cx="10" cy="15" r="5"></circle>
-          <polygon
-            class="animated-shape shape-2"
-            points="30,5 35,15 25,15"
-          ></polygon>
+            <polygon class="animated-shape shape-2" points="30,5 35,15 25,15"></polygon>
           <circle class="animated-shape shape-3" cx="50" cy="80" r="7"></circle>
-          <rect
-            class="animated-shape shape-4"
-            x="70"
-            y="25"
-            width="8"
-            height="8"
-          ></rect>
+            <rect class="animated-shape shape-4" x="70" y="25" width="8" height="8"></rect>
           <circle class="animated-shape shape-5" cx="90" cy="60" r="6"></circle>
-          <polygon
-            class="animated-shape shape-6"
-            points="10,90 20,80 30,90 20,100"
-          ></polygon>
+            <polygon class="animated-shape shape-6" points="10,90 20,80 30,90 20,100"></polygon>
           <circle class="animated-shape shape-7" cx="40" cy="30" r="4"></circle>
           <circle class="animated-shape shape-8" cx="80" cy="10" r="9"></circle>
         </svg>
+          <div class="hero-particles"></div>
+        </div>
 
+        <!-- Hero Content -->
+        <div class="hero-content">
         <div class="container">
-          <h1 class="display-3 fw-bold text-info" data-aos="fade-down">
-            Diseñador y desarrollador en constante evolución
+            <div class="row align-items-center min-vh-100">
+              <div class="col-lg-8 col-xl-7">
+                <div class="hero-text" data-aos="fade-right">
+                  <div class="hero-badge">
+                    <span class="badge-text">¡Hola! Soy</span>
+                  </div>
+                  
+                  <h1 class="hero-title">
+                    <span class="title-line">Josue</span>
+                    <span class="title-line text-info">Sepúlveda</span>
           </h1>
-          <p class="lead my-4" data-aos="fade-up" data-aos-delay="100">
-            Apasionado por crear soluciones creativas, funcionales y bien
-            pensadas.
-          </p>
-          <a
-            href="#about"
-            class="btn btn-outline-info btn-lg"
-            data-aos="zoom-in"
-            data-aos-delay="200"
-            >Conóceme más</a
-          >
+                  
+                  <div class="hero-subtitle">
+                    <span class="typing-text">Diseñador y desarrollador web</span>
+                    <span class="cursor">|</span>
+                  </div>
+                  
+                  <p class="hero-description">
+                    Apasionado por crear <strong>soluciones digitales únicas</strong> que combinan 
+                    diseño creativo con funcionalidad excepcional. Transformo ideas en experiencias 
+                    web que marcan la diferencia.
+                  </p>
+                  
+                  <div class="hero-stats">
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                      <span class="stat-number">6+</span>
+                      <span class="stat-label">Proyectos</span>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                      <span class="stat-number">2+</span>
+                      <span class="stat-label">Años</span>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                      <span class="stat-number">100%</span>
+                      <span class="stat-label">Dedicación</span>
+                    </div>
+                  </div>
+                  
+                  <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+                    <a href="#projects" class="btn btn-primary btn-lg me-3">
+                      <i class="bi bi-eye me-2"></i>Ver Proyectos
+                    </a>
+                    <a href="#contact" class="btn btn-outline-info btn-lg">
+                      <i class="bi bi-chat-dots me-2"></i>Contactar
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-lg-4 col-xl-5">
+                <div class="hero-image" data-aos="fade-left" data-aos-delay="200">
+                  <div class="image-container">
+                    <div class="floating-elements">
+                      <div class="floating-icon" data-aos="fade-down" data-aos-delay="600">
+                        <i class="fab fa-html5"></i>
+                      </div>
+                      <div class="floating-icon" data-aos="fade-down" data-aos-delay="700">
+                        <i class="fab fa-css3-alt"></i>
+                      </div>
+                      <div class="floating-icon" data-aos="fade-down" data-aos-delay="800">
+                        <i class="fab fa-js-square"></i>
+                      </div>
+                      <div class="floating-icon" data-aos="fade-down" data-aos-delay="900">
+                        <i class="fab fa-bootstrap"></i>
+                      </div>
+                    </div>
+                    <div class="main-image">
+                      <img src="img/diseño web.png" alt="Josue Sepúlveda" class="profile-image">
+                      <div class="image-glow"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="1000">
+          <div class="scroll-arrow">
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <span class="scroll-text">Desliza para ver más</span>
         </div>
       </header>
 
-      <section id="about" class="container text-center py-5">
-        <div data-aos="fade-up">
-          <h2 class="text-info fw-bold">Sobre Mí</h2>
-          <p class="fst-italic mx-auto" style="max-width: 700px">
-            Apasionado por la creatividad, la tecnología y el aprendizaje
-            constante, me gusta encontrar soluciones prácticas e innovadoras
-            para cada proyecto. Tengo experiencia en diseño web, creación de
-            contenido digital y atención al cliente. Me defino como una persona
-            autodidacta, resolutiva y comprometida con hacer las cosas bien.
-          </p>
-          <a href="cv.pdf" target="_blank" class="btn btn-info mt-3"
-            >Descargar CV <i class="bi bi-download ms-2"></i
-          ></a>
-        </div>
-      </section>
-
-      <section class="logo-carousel-section py-5">
-        <h3 class="text-center mb-5 fw-bold">Tecnologías que Manejo</h3>
-        <div class="logo-carousel">
-          <div class="logo-track">
-            <div class="logo-slide"><img src="img/1.png" alt="Logo 1" /></div>
-            <div class="logo-slide"><img src="/img/2.png" alt="Logo 2" /></div>
-            <div class="logo-slide"><img src="/img/3.png" alt="Logo 3" /></div>
-            <div class="logo-slide"><img src="/img/4.png" alt="Logo 4" /></div>
-            <div class="logo-slide"><img src="/img/5.png" alt="Logo 5" /></div>
-            <div class="logo-slide"><img src="/img/6.png" alt="Logo 6" /></div>
-            <div class="logo-slide"><img src="/img/7.png" alt="Logo 7" /></div>
-            <div class="logo-slide"><img src="/img/8.png" alt="Logo 8" /></div>
-            <div class="logo-slide"><img src="/img/1.png" alt="Logo 1" /></div>
-            <div class="logo-slide"><img src="/img/2.png" alt="Logo 2" /></div>
-            <div class="logo-slide"><img src="/img/3.png" alt="Logo 3" /></div>
-            <div class="logo-slide"><img src="/img/4.png" alt="Logo 4" /></div>
-            <div class="logo-slide"><img src="/img/5.png" alt="Logo 5" /></div>
-            <div class="logo-slide"><img src="/img/6.png" alt="Logo 6" /></div>
-            <div class="logo-slide"><img src="/img/7.png" alt="Logo 7" /></div>
-            <div class="logo-slide"><img src="/img/8.png" alt="Logo 8" /></div>
-          </div>
-        </div>
-      </section>
-
-      <section id="skills" class="container py-5">
-        <h2 class="text-center text-info fw-bold mb-5">Habilidades</h2>
-        <div class="row text-center justify-content-center g-4">
-          <div class="col-md-6 col-lg-3" data-aos="fade-up">
-            <div class="card h-100 skill-card">
-              <div class="card-body">
-                <i class="bi bi-palette-fill display-4 text-info"></i>
-                <h5 class="card-title mt-3 fw-bold">Diseño Creativo</h5>
-                <p class="card-text">
-                  Diseño visual atractivo y funcional para sitios web y piezas
-                  gráficas.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            class="col-md-6 col-lg-3"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <div class="card h-100 skill-card">
-              <div class="card-body">
-                <i class="bi bi-lightbulb-fill display-4 text-info"></i>
-                <h5 class="card-title mt-3 fw-bold">Resolución de Problemas</h5>
-                <p class="card-text">
-                  Capacidad para encontrar soluciones efectivas y eficientes
-                  bajo presión.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            class="col-md-6 col-lg-3"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <div class="card h-100 skill-card">
-              <div class="card-body">
-                <i class="bi bi-people-fill display-4 text-info"></i>
-                <h5 class="card-title mt-3 fw-bold">Trabajo en Equipo</h5>
-                <p class="card-text">
-                  Facilidad para comunicar, colaborar y aportar en equipos
-                  multidisciplinarios.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="projects" class="py-5">
+      <section id="about" class="about-section">
         <div class="container">
-          <h2 class="text-center text-info fw-bold mb-5">
-            Proyectos Destacados
-          </h2>
-          <div class="row g-4 justify-content-center">
-            <div class="col-md-6 col-lg-4" data-aos="fade-up">
-              <div class="card project-card h-100">
-                <img
-                  src="img/proyecto1.png"
-                  class="card-img-top"
-                  alt="Proyecto 1"
-                />
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title fw-bold">ACCESORIOS DE LUJO</h5>
-                  <p class="card-text flex-grow-1">
-                    Pagina web de comercio electronico de accesorios de lujo
-                    para vehiculos.
-                  </p>
-                  <a
-                    href="https://aichure.co/"
-                    target="_blank"
-                    class="btn btn-outline-info mt-auto"
-                    >Ver Proyecto <i class="bi bi-box-arrow-up-right ms-2"></i
-                  ></a>
+          <div class="row justify-content-center">
+            <div class="col-lg-10 col-xl-8">
+              <div class="about-content text-center" data-aos="fade-up">
+                <div class="section-badge">
+                  <span class="badge-text">Conóceme</span>
                 </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4" data-aos="fade-up">
-              <div class="card project-card h-100">
-                <img
-                  src="img/proyecto2.png"
-                  class="card-img-top"
-                  alt="Proyecto 1"
-                />
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title fw-bold">VENTA DE TRANSFORMADORES</h5>
-                  <p class="card-text flex-grow-1">
-                    Sitio web responsivo para venta de transformadores de
-                    energia de alto y bajo voltaje
-                  </p>
-                  <a
-                    href="https://www.transformadorescdm.com/"
-                    target="_blank"
-                    class="btn btn-outline-info mt-auto"
-                    >Ver Proyecto <i class="bi bi-box-arrow-up-right ms-2"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4" data-aos="fade-up">
-              <div class="card project-card h-100">
-                <img
-                  src="img/proyecto3.png"
-                  class="card-img-top"
-                  alt="Proyecto 1"
-                />
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title fw-bold">
-                    SITIO WEB DE COMIDA SALUDABLE
-                  </h5>
-                  <p class="card-text flex-grow-1">
-                    Sitio web creado en sofware ola click, para venta, envios y
-                    pedidos de comida saludable
-                  </p>
-                  <a
-                    href="https://sabor-tropical-2.ola.click/products"
-                    target="_blank"
-                    class="btn btn-outline-info mt-auto"
-                    >Ver Proyecto <i class="bi bi-box-arrow-up-right ms-2"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4" data-aos="fade-up">
-              <div class="card project-card h-100">
-                <img
-                  src="img/proyecto5.png"
-                  class="card-img-top"
-                  alt="Proyecto 1"
-                />
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title fw-bold">
-                    VENTA DE SOFTWARE DE GIMNASIOS
-                  </h5>
-                  <p class="card-text flex-grow-1">
-                    Pagina web para la venta de software de gestion de
-                    gimnasios, con un diseño moderno y funcional.
-                  </p>
-                  <a
-                    href="https://systemnecs.com/"
-                    target="_blank"
-                    class="btn btn-outline-info mt-auto"
-                    >Ver Proyecto <i class="bi bi-box-arrow-up-right ms-2"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4" data-aos="fade-up">
-              <div class="card project-card h-100">
-                <img
-                  src="img/proyecto6.png"
-                  class="card-img-top"
-                  alt="Proyecto 1"
-                />
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title fw-bold">
-                    WEB PARA EMPRESA DE CARBON
-                  </h5>
-                  <p class="card-text flex-grow-1">
-                    Pagina web informativa  diseñada para una empresa minera de carbon ofreciendo informacion , sevicios, historia y contacto
-                  </p>
-                  <a
-                    href="https://carbonor.com.co/"
-                    target="_blank"
-                    class="btn btn-outline-info mt-auto"
-                    >Ver Proyecto <i class="bi bi-box-arrow-up-right ms-2"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4" data-aos="fade-up">
-              <div class="card project-card h-100">
-                <img
-                  src="img/proyecto7.png"
-                  class="card-img-top"
-                  alt="Proyecto 1"
-                />
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title fw-bold">
-                    PAGINA WEB JOYEROA
-                  </h5>
-                  <p class="card-text flex-grow-1">
-                    Pagina web informativa  diseñada para una empresa de joyeria ofreciendo productos 
-                  </p>
-                  <a
-                    href="https://mtr0da-wr.myshopify.com/"
-                    target="_blank"
-                    class="btn btn-outline-info mt-auto"
-                    >Ver Proyecto <i class="bi bi-box-arrow-up-right ms-2"></i
-                  ></a>
+                
+                <h2 class="section-title">
+                  <span class="title-highlight">Sobre</span> Mí
+                </h2>
+                
+                <p class="about-description">
+                  Apasionado por la <strong>creatividad</strong>, la <strong>tecnología</strong> y el 
+                  <strong>aprendizaje constante</strong>, me especializo en crear soluciones digitales 
+                  que combinan diseño innovador con funcionalidad excepcional.
+                </p>
+                
+                <div class="about-highlights">
+                  <div class="highlight-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="highlight-icon">
+                      <i class="bi bi-lightbulb-fill"></i>
+                    </div>
+                    <div class="highlight-content">
+                      <h5>Creatividad</h5>
+                      <p>Diseño visual atractivo y funcional para cada proyecto</p>
+                    </div>
+                  </div>
+                  
+                  <div class="highlight-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="highlight-icon">
+                      <i class="bi bi-code-slash"></i>
+                    </div>
+                    <div class="highlight-content">
+                      <h5>Desarrollo</h5>
+                      <p>Experiencia en diseño web y creación de contenido digital</p>
+                    </div>
+                  </div>
+                  <div class="highlight-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="highlight-icon">
+                      <i class="bi bi-code-slash"></i>
+                    </div>
+                    <div class="highlight-content">
+                      <h5>Desarrollo</h5>
+                      <p>Experiencia en diseño web y creación de contenido digital</p>
+                    </div>
+                  </div>
+                  
+                  <div class="highlight-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="highlight-icon">
+                      <i class="bi bi-people-fill"></i>
+                    </div>
+                    <div class="highlight-content">
+                      <h5>Colaboración</h5>
+                      <p>Autodidacta, resolutivo y comprometido con la excelencia</p>
+                    </div>
+                  </div>
+        </div>
+                
+                <div class="about-actions" data-aos="fade-up" data-aos-delay="400">
+                  <a href="cv.pdf" target="_blank" class="btn btn-primary btn-lg me-3">
+                    <i class="bi bi-download me-2"></i>Descargar CV
+                  </a>
+                  <a href="#contact" class="btn btn-outline-info btn-lg">
+                    <i class="bi bi-chat-dots me-2"></i>Conversemos
+                  </a>
                 </div>
               </div>
             </div>
@@ -360,70 +289,723 @@
         </div>
       </section>
 
-      <section id="contact" class="container py-5">
-        <h2 class="text-center text-info fw-bold mb-4">Contacto</h2>
-        <p class="text-center lead mb-5">¿Tienes una idea? ¡Hablemos!</p>
-        <form action="https://formsubmit.co/josuesepulvedassj@gmail.com" method="POST" class="mx-auto" style="max-width: 600px" data-aos="fade-up">
-          <div class="mb-3">
-            <label for="name" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="name" name="nombre" required placeholder="Nombre" />
+      <section class="tech-carousel-section">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+              <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                  <span class="badge-text">Tecnologías</span>
+                </div>
+                
+                <h2 class="section-title">
+                  <span class="title-highlight">Stack</span> Tecnológico
+                </h2>
+                
+                <p class="section-description">
+                  Herramientas y tecnologías que domino para crear 
+                  <strong>experiencias web</strong> excepcionales.
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Tu Correo electrónico</label>
-            <input type="email" class="form-control" id="email" name="email" required placeholder="Correo electrónico" />
+        </div>
+
+        <div class="tech-carousel-wrapper">
+          <div class="tech-carousel">
+            <div class="tech-track">
+              <div class="tech-slide" data-aos="fade-up" data-aos-delay="100">
+                <div class="tech-item">
+                  <img src="img/1.png" alt="HTML5" class="tech-logo">
+                  <span class="tech-name">HTML5</span>
+                </div>
+              </div>
+              <div class="tech-slide" data-aos="fade-up" data-aos-delay="200">
+                <div class="tech-item">
+                  <img src="img/2.png" alt="CSS3" class="tech-logo">
+                  <span class="tech-name">CSS3</span>
+                </div>
+              </div>
+              <div class="tech-slide" data-aos="fade-up" data-aos-delay="300">
+                <div class="tech-item">
+                  <img src="img/3.png" alt="JavaScript" class="tech-logo">
+                  <span class="tech-name">JavaScript</span>
+                </div>
+              </div>
+              <div class="tech-slide" data-aos="fade-up" data-aos-delay="400">
+                <div class="tech-item">
+                  <img src="img/4.png" alt="React" class="tech-logo">
+                  <span class="tech-name">React</span>
+                </div>
+              </div>
+              <div class="tech-slide" data-aos="fade-up" data-aos-delay="500">
+                <div class="tech-item">
+                  <img src="img/5.png" alt="Node.js" class="tech-logo">
+                  <span class="tech-name">Node.js</span>
+                </div>
+              </div>
+              <div class="tech-slide" data-aos="fade-up" data-aos-delay="600">
+                <div class="tech-item">
+                  <img src="img/6.png" alt="Bootstrap" class="tech-logo">
+                  <span class="tech-name">Bootstrap</span>
+                </div>
+              </div>
+              <div class="tech-slide" data-aos="fade-up" data-aos-delay="700">
+                <div class="tech-item">
+                  <img src="img/7.png" alt="Git" class="tech-logo">
+                  <span class="tech-name">Git</span>
+                </div>
+              </div>
+              <div class="tech-slide" data-aos="fade-up" data-aos-delay="800">
+                <div class="tech-item">
+                  <img src="img/8.png" alt="Figma" class="tech-logo">
+                  <span class="tech-name">Figma</span>
+                </div>
+              </div>
+              <!-- Duplicados para efecto infinito -->
+              <div class="tech-slide">
+                <div class="tech-item">
+                  <img src="img/1.png" alt="HTML5" class="tech-logo">
+                  <span class="tech-name">HTML5</span>
+                </div>
+              </div>
+              <div class="tech-slide">
+                <div class="tech-item">
+                  <img src="img/2.png" alt="CSS3" class="tech-logo">
+                  <span class="tech-name">CSS3</span>
+                </div>
+              </div>
+              <div class="tech-slide">
+                <div class="tech-item">
+                  <img src="img/3.png" alt="JavaScript" class="tech-logo">
+                  <span class="tech-name">JavaScript</span>
+                </div>
+              </div>
+              <div class="tech-slide">
+                <div class="tech-item">
+                  <img src="img/4.png" alt="React" class="tech-logo">
+                  <span class="tech-name">React</span>
+                </div>
+              </div>
+              <div class="tech-slide">
+                <div class="tech-item">
+                  <img src="img/5.png" alt="Node.js" class="tech-logo">
+                  <span class="tech-name">Node.js</span>
+                </div>
+              </div>
+              <div class="tech-slide">
+                <div class="tech-item">
+                  <img src="img/6.png" alt="Bootstrap" class="tech-logo">
+                  <span class="tech-name">Bootstrap</span>
+                </div>
+              </div>
+              <div class="tech-slide">
+                <div class="tech-item">
+                  <img src="img/7.png" alt="Git" class="tech-logo">
+                  <span class="tech-name">Git</span>
+                </div>
+              </div>
+              <div class="tech-slide">
+                <div class="tech-item">
+                  <img src="img/8.png" alt="Figma" class="tech-logo">
+                  <span class="tech-name">Figma</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <button type="submit" class="btn btn-info w-100">Enviar</button>
+        </div>
+      </section>
+
+      <section id="skills" class="skills-section">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+              <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                  <span class="badge-text">Habilidades</span>
+                </div>
+                
+                <h2 class="section-title">
+                  <span class="title-highlight">Mis</span> Fortalezas
+                </h2>
+                
+                <p class="section-description">
+                  Combinando <strong>creatividad</strong>, <strong>técnica</strong> y <strong>colaboración</strong> 
+                  para crear soluciones digitales excepcionales.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills-grid">
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="skill-icon">
+                <i class="bi bi-palette-fill"></i>
+              </div>
+              <div class="skill-content">
+                <h4 class="skill-title">Diseño Creativo</h4>
+                <p class="skill-description">
+                  Creación de interfaces visuales atractivas y funcionales que 
+                  mejoran la experiencia del usuario y comunican efectivamente.
+                </p>
+                <div class="skill-tags">
+                  <span class="skill-tag">UI/UX Design</span>
+                  <span class="skill-tag">Adobe Creative</span>
+                  <span class="skill-tag">Prototipado</span>
+                </div>
+              </div>
+              <div class="skill-progress">
+                <div class="progress-bar" data-width="90"></div>
+              </div>
+            </div>
+
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="skill-icon">
+                <i class="bi bi-code-slash"></i>
+              </div>
+              <div class="skill-content">
+                <h4 class="skill-title">Desarrollo Frontend</h4>
+                <p class="skill-description">
+                  Desarrollo de aplicaciones web responsivas y modernas usando 
+                  las mejores tecnologías y prácticas de la industria.
+                </p>
+                <div class="skill-tags">
+                  <span class="skill-tag">HTML5/CSS3</span>
+                  <span class="skill-tag">JavaScript</span>
+                  <span class="skill-tag">React</span>
+                </div>
+              </div>
+              <div class="skill-progress">
+                <div class="progress-bar" data-width="85"></div>
+              </div>
+            </div>
+
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="skill-icon">
+                <i class="bi bi-lightbulb-fill"></i>
+              </div>
+              <div class="skill-content">
+                <h4 class="skill-title">Resolución de Problemas</h4>
+                <p class="skill-description">
+                  Capacidad analítica para identificar desafíos y desarrollar 
+                  soluciones innovadoras y eficientes bajo presión.
+                </p>
+                <div class="skill-tags">
+                  <span class="skill-tag">Análisis</span>
+                  <span class="skill-tag">Creatividad</span>
+                  <span class="skill-tag">Adaptabilidad</span>
+                </div>
+              </div>
+              <div class="skill-progress">
+                <div class="progress-bar" data-width="95"></div>
+              </div>
+            </div>
+
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+              <div class="skill-icon">
+                <i class="bi bi-people-fill"></i>
+              </div>
+              <div class="skill-content">
+                <h4 class="skill-title">Trabajo en Equipo</h4>
+                <p class="skill-description">
+                  Colaboración efectiva en equipos multidisciplinarios con 
+                  excelente comunicación y liderazgo proactivo.
+                </p>
+                <div class="skill-tags">
+                  <span class="skill-tag">Comunicación</span>
+                  <span class="skill-tag">Liderazgo</span>
+                  <span class="skill-tag">Colaboración</span>
+                </div>
+              </div>
+              <div class="skill-progress">
+                <div class="progress-bar" data-width="88"></div>
+              </div>
+            </div>
+
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="500">
+              <div class="skill-icon">
+                <i class="bi bi-graph-up-arrow"></i>
+              </div>
+              <div class="skill-content">
+                <h4 class="skill-title">Optimización</h4>
+                <p class="skill-description">
+                  Mejora continua de rendimiento, SEO y experiencia de usuario 
+                  para maximizar el impacto de cada proyecto.
+                </p>
+                <div class="skill-tags">
+                  <span class="skill-tag">Performance</span>
+                  <span class="skill-tag">SEO</span>
+                  <span class="skill-tag">Analytics</span>
+                </div>
+              </div>
+              <div class="skill-progress">
+                <div class="progress-bar" data-width="82"></div>
+              </div>
+            </div>
+
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="600">
+              <div class="skill-icon">
+                <i class="bi bi-book-fill"></i>
+              </div>
+              <div class="skill-content">
+                <h4 class="skill-title">Aprendizaje Continuo</h4>
+                <p class="skill-description">
+                  Pasión por mantenerme actualizado con las últimas tendencias 
+                  y tecnologías del desarrollo web y diseño.
+                </p>
+                <div class="skill-tags">
+                  <span class="skill-tag">Autodidacta</span>
+                  <span class="skill-tag">Innovación</span>
+                  <span class="skill-tag">Curiosidad</span>
+                </div>
+              </div>
+              <div class="skill-progress">
+                <div class="progress-bar" data-width="92"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects-section">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+              <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                  <span class="badge-text">Proyectos</span>
+                </div>
+                
+                <h2 class="section-title">
+                  <span class="title-highlight">Mis</span> Trabajos
+          </h2>
+                
+                <p class="section-description">
+                  Una selección de proyectos donde he aplicado mis habilidades 
+                  para crear <strong>soluciones digitales</strong> innovadoras y funcionales.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="projects-grid">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="project-image">
+                <img src="img/proyecto1.png" alt="Accesorios de Lujo">
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a href="https://aichure.co/" target="_blank" class="project-link">
+                      <i class="bi bi-eye"></i>
+                    </a>
+                    <a href="https://aichure.co/" target="_blank" class="project-link">
+                      <i class="bi bi-box-arrow-up-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-content">
+                <div class="project-category">E-commerce</div>
+                <h3 class="project-title">Accesorios de Lujo</h3>
+                <p class="project-description">
+                  Plataforma de comercio electrónico para accesorios de lujo automotriz 
+                  con diseño elegante y funcionalidad completa.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">HTML5</span>
+                  <span class="tech-tag">CSS3</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">Bootstrap</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="project-image">
+                <img src="img/proyecto2.png" alt="Transformadores CDM">
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a href="https://www.transformadorescdm.com/" target="_blank" class="project-link">
+                      <i class="bi bi-eye"></i>
+                    </a>
+                    <a href="https://www.transformadorescdm.com/" target="_blank" class="project-link">
+                      <i class="bi bi-box-arrow-up-right"></i>
+                    </a>
+                </div>
+              </div>
+            </div>
+              <div class="project-content">
+                <div class="project-category">Industrial</div>
+                <h3 class="project-title">Transformadores CDM</h3>
+                <p class="project-description">
+                  Sitio web corporativo para venta de transformadores de energía 
+                  con diseño profesional y información técnica detallada.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Responsive</span>
+                  <span class="tech-tag">SEO</span>
+                  <span class="tech-tag">Performance</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="project-image">
+                <img src="img/proyecto3.png" alt="Comida Saludable">
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a href="https://sabor-tropical-2.ola.click/products" target="_blank" class="project-link">
+                      <i class="bi bi-eye"></i>
+                    </a>
+                    <a href="https://sabor-tropical-2.ola.click/products" target="_blank" class="project-link">
+                      <i class="bi bi-box-arrow-up-right"></i>
+                    </a>
+                </div>
+              </div>
+            </div>
+              <div class="project-content">
+                <div class="project-category">Alimentación</div>
+                <h3 class="project-title">Sabor Tropical</h3>
+                <p class="project-description">
+                  Plataforma de pedidos online para comida saludable con sistema 
+                  de delivery integrado y gestión de menús.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Ola Click</span>
+                  <span class="tech-tag">E-commerce</span>
+                  <span class="tech-tag">Delivery</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+              <div class="project-image">
+                <img src="img/proyecto5.png" alt="SystemNECS">
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a href="https://systemnecs.com/" target="_blank" class="project-link">
+                      <i class="bi bi-eye"></i>
+                    </a>
+                    <a href="https://systemnecs.com/" target="_blank" class="project-link">
+                      <i class="bi bi-box-arrow-up-right"></i>
+                    </a>
+                </div>
+              </div>
+            </div>
+              <div class="project-content">
+                <div class="project-category">Software</div>
+                <h3 class="project-title">SystemNECS</h3>
+                <p class="project-description">
+                  Landing page para software de gestión de gimnasios con diseño 
+                  moderno y presentación clara de funcionalidades.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Landing Page</span>
+                  <span class="tech-tag">SaaS</span>
+                  <span class="tech-tag">Modern Design</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+              <div class="project-image">
+                <img src="img/proyecto6.png" alt="Carbonor">
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a href="https://carbonor.com.co/" target="_blank" class="project-link">
+                      <i class="bi bi-eye"></i>
+                    </a>
+                    <a href="https://carbonor.com.co/" target="_blank" class="project-link">
+                      <i class="bi bi-box-arrow-up-right"></i>
+                    </a>
+                </div>
+              </div>
+            </div>
+              <div class="project-content">
+                <div class="project-category">Minería</div>
+                <h3 class="project-title">Carbonor</h3>
+                <p class="project-description">
+                  Sitio web corporativo para empresa minera con información 
+                  institucional, servicios y contacto profesional.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Corporate</span>
+                  <span class="tech-tag">Information</span>
+                  <span class="tech-tag">Contact</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="600">
+              <div class="project-image">
+                <img src="img/proyecto7.png" alt="Joyería">
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a href="https://mtr0da-wr.myshopify.com/" target="_blank" class="project-link">
+                      <i class="bi bi-eye"></i>
+                    </a>
+                    <a href="https://mtr0da-wr.myshopify.com/" target="_blank" class="project-link">
+                      <i class="bi bi-box-arrow-up-right"></i>
+                    </a>
+                </div>
+              </div>
+            </div>
+              <div class="project-content">
+                <div class="project-category">Retail</div>
+                <h3 class="project-title">Joyería Elegante</h3>
+                <p class="project-description">
+                  Tienda online de joyería con catálogo de productos elegantes 
+                  y sistema de compras integrado con Shopify.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Shopify</span>
+                  <span class="tech-tag">E-commerce</span>
+                  <span class="tech-tag">Jewelry</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="projects-cta" data-aos="fade-up" data-aos-delay="700">
+            <div class="cta-content">
+              <h3>¿Tienes un proyecto en mente?</h3>
+              <p>Estoy listo para ayudarte a hacer realidad tus ideas digitales</p>
+              <a href="#contact" class="btn btn-primary btn-lg">
+                <i class="bi bi-chat-dots me-2"></i>Hablemos de tu proyecto
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+              <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                  <span class="badge-text">Contacto</span>
+                </div>
+                
+                <h2 class="section-title">
+                  <span class="title-highlight">Hablemos</span> de tu Proyecto
+                </h2>
+                
+                <p class="section-description">
+                  ¿Tienes una idea que quieres hacer realidad? Estoy aquí para ayudarte 
+                  a crear <strong>soluciones digitales</strong> que marquen la diferencia.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-5 align-items-center">
+            <!-- Contact Info -->
+            <div class="col-lg-6">
+              <div class="contact-info" data-aos="fade-right">
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="bi bi-envelope-fill"></i>
+                  </div>
+                  <div class="contact-details">
+                    <h4>Email</h4>
+                    <p>josuesepulvedassj@gmail.com</p>
+                    <a href="mailto:josuesepulvedassj@gmail.com">Enviar email</a>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="bi bi-phone-fill"></i>
+                  </div>
+                  <div class="contact-details">
+                    <h4>Teléfono</h4>
+                    <p>+57 311 293 6388</p>
+                    <a href="tel:+573112936388">Llamar ahora</a>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="bi bi-geo-alt-fill"></i>
+                  </div>
+                  <div class="contact-details">
+                    <h4>Ubicación</h4>
+                    <p>Cúcuta, Norte de Santander</p>
+                    <span>Colombia</span>
+                  </div>
+                </div>
+
+                <div class="contact-social">
+                  <h4>Conecta conmigo</h4>
+                  <div class="social-links">
+                    <a href="https://www.linkedin.com/" target="_blank" class="social-link">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.github.com/" target="_blank" class="social-link">
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://wa.me/573112936388" target="_blank" class="social-link">
+                      <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" class="social-link">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-lg-6">
+              <div class="contact-form-wrapper" data-aos="fade-left">
+                <form action="https://formsubmit.co/josuesepulvedassj@gmail.com" method="POST" class="contact-form">
+                  <input type="hidden" name="_subject" value="Nuevo mensaje desde tu portafolio - Josue Sepúlveda">
+                  <input type="hidden" name="_captcha" value="false">
+                  <input type="hidden" name="_next" value="gracias.html">
+                  <input type="hidden" name="_template" value="table">
+                  <input type="hidden" name="_autoresponse" value="¡Gracias por contactarme! He recibido tu mensaje y te responderé pronto.">
+                  
+                  <div class="form-group">
+                    <label for="name" class="form-label">Nombre completo</label>
+                    <input 
+                      type="text" 
+                      class="form-control" 
+                      id="name" 
+                      name="nombre" 
+                      required 
+                      placeholder="Tu nombre completo"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email" class="form-label">Correo electrónico</label>
+                    <input 
+                      type="email" 
+                      class="form-control" 
+                      id="email" 
+                      name="email" 
+                      required 
+                      placeholder="tu@email.com"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="subject" class="form-label">Asunto</label>
+                    <select class="form-control" id="subject" name="asunto" required>
+                      <option value="">Selecciona un asunto</option>
+                      <option value="Nuevo proyecto">Nuevo proyecto</option>
+                      <option value="Consulta general">Consulta general</option>
+                      <option value="Colaboración">Colaboración</option>
+                      <option value="Otro">Otro</option>
+                    </select>
+          </div>
+
+                  <div class="form-group">
+                    <label for="message" class="form-label">Mensaje</label>
+                    <textarea 
+                      class="form-control" 
+                      id="message" 
+                      name="mensaje" 
+                      rows="5" 
+                      required 
+                      placeholder="Cuéntame sobre tu proyecto o idea..."
+                    ></textarea>
+          </div>
+
+                  <button type="submit" class="btn btn-primary btn-lg w-100">
+                    <i class="bi bi-send me-2"></i>Enviar Mensaje
+                  </button>
         </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
-    <footer class="footer-wrapper footer-layout2 ">
+    <footer class="footer-wrapper">
     <div class="container">
-        <div class="footer-wrap">
-            <div class="widget-area">
-                <div class="row justify-content-between">
-                    <div class="col-md-6 col-xl-6">
-                        <div class="widget footer-widget">
-                            <div class="th-widget-about">
-                                <div class="about-logo">
-                                    <a href="/"><img src="img/diseño web.png" alt="Carbonor"></a>
+        <div class="footer-content">
+          <div class="row g-4">
+            <!-- Información Personal -->
+            <div class="col-lg-4 col-md-6">
+              <div class="footer-section">
+                <div class="footer-logo mb-4">
+                  <img src="img/diseño web.png" alt="Josue Sepúlveda" class="logo-img">
+                  <h5 class="logo-text mt-3">Josue Sepúlveda</h5>
                                 </div>
-                                <p class="about-text">Transformo ideas en páginas web únicas. Mi portafolio reúne diseños modernos, <br> elegantes y pensados para destacar tu marca en el mundo digital.</p>
-                                <div class="th-social style7">
-                                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
-                                    <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-                                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
-                                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                <p class="footer-description">
+                  Diseñador y desarrollador web apasionado por crear soluciones digitales únicas. 
+                  Transformo ideas en experiencias web modernas y funcionales.
+                </p>
+                <div class="social-links">
+                  <a href="https://www.facebook.com/" target="_blank" class="social-link" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="https://www.twitter.com/" target="_blank" class="social-link" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/" target="_blank" class="social-link" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a href="https://www.youtube.com/" target="_blank" class="social-link" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                  <a href="https://www.instagram.com/" target="_blank" class="social-link" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                  </a>
                                 </div>
                             </div>
+            </div>
+
+            <!-- Enlaces Rápidos -->
+            <div class="col-lg-2 col-md-6">
+              <div class="footer-section">
+                <h6 class="footer-title">Enlaces</h6>
+                <ul class="footer-links">
+                  <li><a href="#about">Sobre mí</a></li>
+                  <li><a href="#skills">Habilidades</a></li>
+                  <li><a href="#projects">Proyectos</a></li>
+                  <li><a href="#contact">Contacto</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Servicios -->
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-section">
+                <h6 class="footer-title">Servicios</h6>
+                <ul class="footer-links">
+                  <li>Diseño Web</li>
+                  <li>Desarrollo Frontend</li>
+                  <li>Diseño UX/UI</li>
+                  <li>Consultoría Digital</li>
+                </ul>
                         </div>
                     </div>
-                    <div class="col-md-6 col-xl-4">
-                        <div class="widget footer-widget">
-                            <h3 class="widget_title">Contáctanos</h3>
-                            <div class="th-widget-contact">
-                                <div class="info-box_text">
-                                    <div class="icon"><img src="img/location-dot.svg" alt="img"></div>
-                                    <div class="details">
+
+            <!-- Información de Contacto -->
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-section">
+                <h6 class="footer-title">Contacto</h6>
+                <div class="contact-info">
+                  <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
                                         <p>Cúcuta, Norte de Santander</p>
                                         <p>Colombia</p>
                                     </div>
                                 </div>
-                                <div class="info-box_text">
-                                    <div class="icon">
-                                        <img src="img/phone.svg" alt="img">
-                                    </div>
-                                    <div class="details">
-                                        <p><a href="tel:+573112936388" class="info-box_link">+573112936388</a></p>
+                  <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                      <a href="tel:+573112936388">+57 311 293 6388</a>
                                     </div>
                                 </div>
-                                <div class="info-box_text">
-                                    <div class="icon">
-                                        <img src="img/envelope.svg" alt="img">
-                                    </div>
-                                    <div class="details">
-                                        <p><a href="mailto:comercial@carbonor.com.co" class="info-box_link">comercial@carbonor.com.co</a></p>
+                  <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                      <a href="mailto:josuesepulvedassj@gmail.com">josuesepulvedassj@gmail.com</a>
                                     </div>
                                 </div>
                             </div>
@@ -432,23 +1014,20 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="copyright-wrap bg-title-dark">
+
+      <!-- Copyright -->
+      <div class="footer-bottom">
         <div class="container">
-            <div class="row gy-2 align-items-center">
-                <div class="col-lg-6">
+          <div class="row align-items-center">
+            <div class="col-md-6">
                     <p class="copyright-text">
-                        Copyright <i class="fal fa-copyright"></i> 2025 <a href="https://ccnasys.com">ccnasys.com</a> Todos los derechos reservados.
+                © <span id="year">2025</span> Josue Sepúlveda. Todos los derechos reservados.
                     </p>
                 </div>
-                <div class="col-lg-6 text-center text-lg-end">
-                    <div class="footer-links">
-                        <ul>
-                            <!-- <li><a href="contact.html">Terms of service</a></li>
-                            <li><a href="contact.html">Privacy policy</a></li>
-                            <li><a href="contact.html">Cookies</a></li> -->
-                        </ul>
-                    </div>
+            <div class="col-md-6 text-md-end">
+              <p class="made-with">
+                Hecho con <i class="fas fa-heart text-danger"></i> y mucho café
+              </p>
                 </div>
             </div>
         </div>
@@ -491,10 +1070,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-stars@2/tsparticles.preset.stars.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-links@2/tsparticles.preset.links.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-triangles@2/tsparticles.preset.triangles.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.x/tsparticles.min.js"></script>
     
   </body>
 </html>
